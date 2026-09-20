@@ -1,0 +1,506 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff5f8;
+    color: #4a2c35;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+nav {
+    background-color: #f4a6c1;
+    width:100%;
+    min-height:75px;
+    padding:20px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    margin:0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap:0;
+    width:100%;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 12px 20px;
+}
+
+nav a:hover {
+    color: #8e3a59;
+    border-bottom: 3px solid#8e3a59;
+    padding-bottom:6px;
+}
+
+nav a.active{
+    color:#8e3a59;
+    border-bottom: 3px solid #8e3a59;
+    padding-bottom:6px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    text-align: center;
+    padding:0;
+}
+
+header h1 {
+    color: #333333;
+    font-size: 2.3rem;
+    margin-top:35px;
+    margin-bottom: 10px;
+}
+
+/* =========================
+   MAIN
+========================= */
+
+main {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 15px 25px;
+}
+
+/* =========================
+   SECTIONS
+========================= */
+
+section {
+    background-color: white;
+    padding: 22px;
+    margin-bottom: 20px;
+    border-radius: 12px;
+    border: 1px solid #f3d6df;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+h2 {
+    color: #2e3c50;
+    font-size: 24px;
+    margin-bottom: 12px;
+}
+
+h3 {
+    color: #8e3a59;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+/* =========================
+   TEXT
+========================= */
+
+p {
+    color: #555555;
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   LIST
+========================= */
+
+ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+li {
+    color: #555555;
+    line-height: 1.7;
+}
+
+/* =========================
+   IMAGES
+========================= */
+
+.home-image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+.learn-image {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+section img {
+    width: 100%;
+    max-width: 650px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+section img.learn-image {
+    width: 70%;
+    max-width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* =========================
+   HOME INTRO
+========================= */
+
+.intro {
+    max-width: 850px;
+    margin: 30px auto;
+    padding: 30px;
+    background-color: white;
+    text-align: center;
+    border-radius: 12px;
+    border: 1px solid #f3d6df;
+}
+
+.intro h2 {
+    color: #d96b91;
+}
+
+.intro p {
+    line-height: 1.8;
+}
+
+/* =========================
+   EXPLORE BUTTON
+========================= */
+
+.explore-button {
+    display: inline-block;
+    background-color: #d96b91;
+    color: white;
+    padding: 11px 23px;
+    text-decoration: none;
+    border-radius: 25px;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.explore-button:hover {
+    background-color: #b94f75;
+}
+
+/* =========================
+   FEATURE CARDS
+========================= */
+
+.features,
+.features-container {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    flex-wrap: wrap;
+}
+
+.feature-card {
+    background-color: white;
+    width: 30%;
+    min-width: 180px;
+    padding: 22px;
+    text-align: center;
+    border: 1px solid #f3d6df;
+    border-radius: 12px;
+}
+
+.feature-card h3 {
+    color: #d96b91;
+    margin-bottom: 10px;
+}
+
+.feature-card:hover {
+    transform: translateY(-3px);
+}
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background-color: white;
+}
+
+th {
+    background-color: #d96b91;
+    color: white;
+    padding: 12px;
+    text-align: left;
+}
+
+td {
+    padding: 12px;
+    border-bottom: 1px solid #f3d6df;
+    color: #555555;
+}
+
+tr:hover {
+    background-color: #fff0f4;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background-color: white;
+    border-top: 1px solid #f3d6df;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    color: #777777;
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    nav ul {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    main {
+        padding: 15px;
+    }
+
+    section {
+        padding: 18px;
+    }
+
+    .feature-card {
+        width: 100%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+header h1 {
+    color: #2c3e50
+}
+
+/* =========================
+   TECHNOLOGY PAGE
+========================= */
+
+.technology-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #f3d6df;
+}
+
+.technology-section h2 {
+    color: #d96b91;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.technology-section h3 {
+    color: #8e3a59;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.technology-section p {
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.technology-section ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.technology-section li {
+    color: #555555;
+    line-height: 1.7;
+}
+
+.technology-section img {
+    width: 100%;
+    max-width: 650px;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+section img.healthcare-image {
+    width: 100%;
+    max-width: 650px;
+    height: auto !important;
+    object-fit: contain !important;
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+}
+
+/* =========================
+   LIFELONG LEARNING PAGE
+========================= */
+
+.lifelong-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #f3d6df;
+}
+
+.lifelong-section h2 {
+    color: #d96b91;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.lifelong-section p {
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   CAREERS PAGE
+========================= */
+
+.career-section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #f3d6df;
+}
+
+.career-section h2 {
+    color: #333333;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.career-section h3 {
+    color: #8e3a59;
+    font-size: 18px;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+.career-section p {
+    color: #555555;
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.career-section ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.career-section li {
+    color: #555555;
+    line-height: 1.7;
+}
+
+table a {
+    color: #8e3a59;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+table a:hover {
+    color: #d96b91;
+    text-decoration: underline;
+}
+
+/* =========================
+   BACK TO TOP
+========================= */
+
+.back-to-top {
+    display: block;
+    width: fit-content;
+    margin: 20px auto;
+    padding: 10px 18px;
+    background-color: #d96b91;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+.back-to-top:hover {
+    background-color: #b94f75;
+}
+
+/* =========================
+   IMAGE HOVER
+========================= */
+
+section img {
+    transition: transform 0.3s ease;
+}
+
+section img:hover {
+    transform: scale(1.02);
+}
+
+/* =========================
+   CARD SHADOW
+========================= */
+
+section,
+.feature-card,
+.intro {
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
