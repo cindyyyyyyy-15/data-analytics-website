@@ -246,6 +246,25 @@ section img:hover {
     border-radius: 16px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
     transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #d96b91;
+}
+
+.learn-section .feature-card {
+    min-height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .feature-card h3 {
@@ -278,6 +297,7 @@ th {
     padding: 14px;
     text-align: left;
     font-size: 15px;
+    font-weight: 600;
 }
 
 td {
@@ -287,8 +307,17 @@ td {
     line-height: 1.6;
 }
 
+.learn-section table td:first-child {
+    font-weight: bold;
+    color: #8e3a59;
+}
+
 tr:hover {
     background-color: #fff0f4;
+}
+
+.learn-section table tr {
+    transition: background-color 0.2s ease;
 }
 
 /* =========================
@@ -348,6 +377,36 @@ footer p {
         width: 100%;
     }
 
+     .technology-section img {
+        height: auto;
+    }
+
+        .career-section {
+        padding: 20px;
+    }
+
+    .career-section table {
+        font-size: 13px;
+    }
+
+    .career-section th,
+    .career-section td {
+        padding: 10px;
+    }
+
+        .lifelong-section {
+        padding: 20px;
+    }
+
+    .lifelong-section table {
+        font-size: 13px;
+    }
+
+    .lifelong-section th,
+    .lifelong-section td {
+        padding: 10px;
+    }
+
     header h1 {
         font-size: 2rem;
     }
@@ -364,6 +423,10 @@ footer p {
     .hero p {
         font-size: 16px;
     }
+
+    .process-step:not(:last-child)::after {
+        display: none;
+    }
 }
 
 
@@ -377,10 +440,17 @@ header h1 {
 
 .technology-section {
     background-color: white;
-    padding: 25px;
+    padding: 28px;
     margin-bottom: 25px;
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid #f3d6df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.technology-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(216, 109, 146, 0.12);
 }
 
 .technology-section h2 {
@@ -389,10 +459,23 @@ header h1 {
     margin-bottom: 15px;
 }
 
+.technology-section h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: #d96b91;
+    margin-top: 8px;
+    border-radius: 3px;
+}
+
 .technology-section h3 {
     color: #8e3a59;
-    margin-top: 15px;
-    margin-bottom: 8px;
+    font-size: 18px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    border-left: 4px solid #d96b91;
 }
 
 .technology-section p {
@@ -414,11 +497,25 @@ header h1 {
 .technology-section img {
     width: 100%;
     max-width: 650px;
-    height: auto;
-    object-fit: contain;
+    height: auto; 
     display: block;
     margin: 20px auto;
-    border-radius: 10px;
+    border-radius: 14px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.technology-section img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 7px 18px rgba(216, 109, 146, 0.15);
+}
+.technology-section ul li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.technology-section ul li::marker {
+    color: #d96b91;
 }
 
 section img.healthcare-image {
@@ -437,10 +534,17 @@ section img.healthcare-image {
 
 .lifelong-section {
     background-color: white;
-    padding: 25px;
+    padding: 28px;
     margin-bottom: 25px;
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid #f3d6df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.lifelong-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(216, 109, 146, 0.12);
 }
 
 .lifelong-section h2 {
@@ -449,10 +553,29 @@ section img.healthcare-image {
     margin-bottom: 15px;
 }
 
+.lifelong-section h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: #d96b91;
+    margin-top: 8px;
+    border-radius: 3px;
+}
+
 .lifelong-section p {
     color: #555555;
     line-height: 1.7;
     margin-bottom: 12px;
+}
+
+.lifelong-section ul li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.lifelong-section ul li::marker {
+    color: #d96b91;
 }
 
 /* =========================
@@ -461,16 +584,33 @@ section img.healthcare-image {
 
 .career-section {
     background-color: white;
-    padding: 25px;
+    padding: 28px;
     margin-bottom: 25px;
-    border-radius: 12px;
+    border-radius: 16px;
     border: 1px solid #f3d6df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.career-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(216, 109, 146, 0.12);
 }
 
 .career-section h2 {
-    color: #333333;
+    color: #d96b91;
     font-size: 24px;
     margin-bottom: 15px;
+}
+
+.career-section h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: #d96b91;
+    margin-top: 8px;
+    border-radius: 3px;
 }
 
 .career-section h3 {
@@ -494,6 +634,12 @@ section img.healthcare-image {
 .career-section li {
     color: #555555;
     line-height: 1.7;
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.career-section li::marker {
+    color: #d96b91;
 }
 
 table a {
@@ -756,6 +902,16 @@ section,
     margin-bottom: 15px;
 }
 
+.learn-section h2::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 3px;
+    background-color: #d96b91;
+    margin-top: 8px;
+    border-radius: 3px;
+}
+
 .learn-section h3 {
     color: #8e3a59;
     margin-top: 15px;
@@ -772,4 +928,203 @@ main > header h1 {
     text-align: center;
     margin: 30px 0 25px;
     font-weight: 700;
+}
+
+/* =========================
+   WHY DATA ANALYTICS MATTERS
+========================= */
+
+.why-section {
+    background: white;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 850px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #f3d6df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+.why-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(216, 109, 146, 0.12);
+}
+
+.why-section h2 {
+    color: #d96b91;
+    font-size: 26px;
+    margin-bottom: 12px;
+}
+
+.why-section p {
+    color: #555555;
+    line-height: 1.7;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* =========================
+   FEATURE ICONS
+========================= */
+
+.feature-icon {
+    font-size: 32px;
+    margin-bottom: 12px;
+}
+
+/* =========================
+   DATA ANALYTICS PROCESS
+========================= */
+
+.process-section {
+    background-color: white;
+    padding: 30px;
+    margin: 30px auto;
+    max-width: 900px;
+    text-align: center;
+    border-radius: 16px;
+    border: 1px solid #f3d6df;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.process-section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(216, 109, 146, 0.12);
+}
+
+.process-section h2 {
+    color: #d96b91;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.process-intro {
+    max-width: 700px;
+    margin: 0 auto 25px;
+}
+
+.process-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.process-step {
+    flex: 1;
+    min-width: 140px;
+    padding: 22px 12px;
+    background-color: #fff5f8;
+    border: 1px solid #f3d6df;
+    border-radius: 14px;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.process-step:not(:last-child)::after {
+    content: "→";
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #d96b91;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(216, 109, 146, 0.15);
+}
+
+.process-step span {
+    display: block;
+    color: #d96b91;
+    font-size: 13px;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.process-step h3 {
+    color: #8e3a59;
+    margin-bottom: 8px;
+}
+
+.process-step p {
+    font-size: 13px;
+    margin-bottom: 0;
+}
+
+/* =========================
+   LEARN PAGE HEADER
+========================= */
+
+.page-header {
+    text-align: center;
+    padding: 35px 20px 25px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-header h1 {
+    color: #2c3e50;
+    font-size: 34px;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    color: #8e3a59;
+    font-size: 16px;
+    margin-bottom: 0;
+}
+
+/* =========================
+   LEARN CHALLENGES
+========================= */
+
+.learn-section ul li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.learn-section ul li::marker {
+    color: #d96b91;
+}
+
+/* =========================
+   WORKPLACE APPLICATIONS
+========================= */
+
+.learn-section p + p {
+    margin-top: 15px;
+}
+
+.learn-section p strong {
+    color: #8e3a59;
+}
+
+/* =========================
+   TABLE DESCRIPTION
+========================= */
+
+.table-description {
+    color: #777777;
+    font-size: 14px;
+    margin-top: -5px;
+    margin-bottom: 15px;
+}
+
+/* =========================
+   TECHNOLOGY LISTS
+========================= */
+
+.technology-section ul li {
+    margin-bottom: 8px;
+    padding-left: 5px;
+}
+
+.technology-section ul li::marker {
+    color: #d96b91;
 }
