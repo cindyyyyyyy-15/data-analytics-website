@@ -504,3 +504,62 @@ section,
 .intro {
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
 }
+
+/* =========================
+   FEEDBACK FORM
+========================= */
+
+.feedback-form {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 12px;
+    border: 1px solid #f3d6df;
+}
+
+.feedback-form h2 {
+    color: #d96b91;
+    margin-bottom: 20px;
+}
+
+.feedback-form form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form label {
+    color: #555555;
+    font-weight: bold;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.feedback-form input,
+.feedback-form select,
+.feedback-form textarea {
+    padding: 10px;
+    border: 1px solid #e5b8c8;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.feedback-form textarea {
+    resize: vertical;
+}
+
+.feedback-form button {
+    width: fit-content;
+    margin-top: 18px;
+    padding: 10px 22px;
+    background-color: #d96b91;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.feedback-form button:hover {
+    background-color: #b94f75;
+}
